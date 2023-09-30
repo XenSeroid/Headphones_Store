@@ -10,18 +10,24 @@ def detail(request, headphones_id):
     h = get_object_or_404(Headphones, id = headphones_id)
     return render(request,'headphones_detail.html',{'headphone':h})
 
+def search(request):
+    mass = request.GET.get('m')
+    mass = mass.strip()
+    h = Headphones.objects.filter(product_name__icontains = mass) if mass else Headphones.objects.all 
+    return render(request, 'search.html', {'headphones': h})
 
-def headphones(request):
-    return render(request,'B&W px8.html')
 
-def headphones1(request):
-    return render(request,'Bang & Olufsen Beoplay H95.html')
+# def headphones(request):
+#     return render(request,'B&W px8.html')
 
-def headphones2(request):
-    return render(request,'Apple Airpods Max.html')
+# def headphones1(request):
+#     return render(request,'Bang & Olufsen Beoplay H95.html')
 
-def headphones3(request):
-    return render(request,'Sennheiser HD 400 PRO.html')
+# def headphones2(request):
+#     return render(request,'Apple Airpods Max.html')
 
-def headphones4(request):
-    return render(request,'Apple AirPods Pro 3 gen.html')
+# def headphones3(request):
+#     return render(request,'Sennheiser HD 400 PRO.html')
+
+# def headphones4(request):
+#     return render(request,'Apple AirPods Pro 3 gen.html')

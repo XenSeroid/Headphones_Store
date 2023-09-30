@@ -1,11 +1,12 @@
 <header>
-    <nav class="navbar bg-body-tertiary" style="background-color: #17b2b4;">
-        <div class="container-fluid">
-          <a class="navbar-brand">Gekstore</a>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search headphones" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+  <nav class="navbar bg-body-tertiary" style="background-color: #17b2b4;">
+      <div class="container-fluid">
+          <a class="navbar-brand">
+          </a>
+          <form class="d-flex" role="search" method="GET" action="{% url 'product:search_headphones' %}">
+              <input class="form-control me-2" type="search" name="m" placeholder="Search headphones" aria-label="Search" value="{{ request.GET.m }}">
+              <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
-        </div>
-      </nav>
+      </div>
+  </nav>
 </header>

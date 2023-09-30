@@ -4,7 +4,8 @@ from product.apps import ProductConfig
 app_name = ProductConfig.name
 urlpatterns = [
     path('', views.index),
-    path('headphone/<int:headphones_id>/', views.detail, name='detail')
+    path('headphone/<int:headphones_id>/', views.detail, name='detail'),
+    path('search/', views.search, name = 'search_headphones'),
     # path('B&Wpx8',views.headphones, name = 'head'),
     # path('Bang&OlufsenBeoplayH95',views.headphones1, name = 'head1'),
     # path('AppleAirpodsMax',views.headphones2,name = 'head2'),
