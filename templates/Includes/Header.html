@@ -1,7 +1,9 @@
 <header>
   <nav class="navbar bg-body-tertiary" style="background-color: #17b2b4;">
       <div class="container-fluid">
-          <a class="navbar-brand">
+          <a class="navbar-brand"><h2>
+            GekStore
+          </h2>
           </a>
           <form class="d-flex" role="search" method="GET" action="{% url 'product:search_headphones' %}">
               <input class="form-control me-2" type="search" name="m" placeholder="Search headphones" aria-label="Search" value="{{ request.GET.m }}">
