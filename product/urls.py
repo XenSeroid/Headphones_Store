@@ -3,7 +3,7 @@ from product import views
 from product.apps import ProductConfig
 app_name = ProductConfig.name
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name = 'index' ),
     path('headphone/<int:headphones_id>/', views.detail, name='detail'),
     path('search/', views.search, name = 'search_headphones'),
     # path('B&Wpx8',views.headphones, name = 'head'),

@@ -4,9 +4,11 @@
           <a class="navbar-brand"><h2>
             GekStore
           </h2>
+          <button type="button" class="btn btn-warning"><a href="/auth/login/">Войти</a></button>
+          <button type="button" class="btn btn-warning"><a href="/auth/signup/">Регистрация</a></button>
           </a>
           <form class="d-flex" role="search" method="GET" action="{% url 'product:search_headphones' %}">
-              <input class="form-control me-2" type="search" name="m" placeholder="Search headphones" aria-label="Search" value="{{ request.GET.m }}">
+              <input class="form-control me-2" type="search" name="m" placeholder="Поиск товаров" aria-label="Search" value="{{ request.GET.m }}">
               <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
       </div>
